@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Community rigs | Nicholls Tech (concept)</title>
+<meta name="description" content="Show off the PC you're running and help build the Nicholls Tech gallery.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="concept-bar">Concept build: layout and placeholder content only. Not the final site.</div>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">NT</span> Nicholls Tech</a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="builds.html">Builds</a><a href="services.html">Services</a><a href="rigs.html" aria-current="page">Community rigs</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></nav>
+</header>
+<main>
+
+<section class="page-head">
+  <h1>Community rigs</h1>
+  <p class="lead">What are you running right now? Share your specs and, once approved, your rig joins this gallery. These are friends' and community machines, shown separately from builds made by Nicholls Tech.</p>
+</section>
+<section>
+  <h2>Where to find your specs</h2>
+  <details class="guide" open>
+    <summary>Windows: the quick way</summary>
+    <ol>
+      <li><strong>CPU, memory, drives, graphics:</strong> press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd> to open Task Manager, then open the <em>Performance</em> tab. Click CPU, Memory, Disk and GPU to see each model and size.</li>
+      <li><strong>Motherboard:</strong> press <kbd>Win</kbd>+<kbd>R</kbd>, type <code>msinfo32</code>, press Enter. Look for <em>BaseBoard Manufacturer</em> and <em>BaseBoard Product</em>. A prebuilt may show the PC maker's name instead.</li>
+      <li><strong>RAM type and speed:</strong> Task Manager &rarr; Performance &rarr; Memory shows speed and type (DDR4 or DDR5) in the top right.</li>
+    </ol>
+  </details>
+  <details class="guide">
+    <summary>Windows: the detailed way</summary>
+    <p>The free tool <strong>CPU-Z</strong> has tabs for CPU, Mainboard, Memory and Graphics. It lists exact models and speeds. Copy what you see into the boxes below.</p>
+  </details>
+  <details class="guide">
+    <summary>Mac or Linux</summary>
+    <p>On a Mac, choose the Apple menu &rarr; <em>About This Mac</em>. On Linux, <code>lscpu</code>, <code>free -h</code>, <code>lsblk</code> and <code>lspci | grep -i vga</code> show CPU, memory, drives and graphics.</p>
+  </details>
+</section>
+<section>
+  <h2>Submit your rig</h2>
+  <p class="muted">Demo only for now: nothing is sent or saved. Approved rigs will appear below.</p>
+  
+<form class="form demo-form" data-demo="rig" novalidate>
+  <fieldset>
+    <legend>About you</legend>
+    <label>Name or nickname <input name="who" type="text" autocomplete="off" required></label>
+    <label>Email (not shown on the site) <input name="email" type="email" autocomplete="off" required></label>
+  </fieldset>
+  <fieldset>
+    <legend>Your parts</legend>
+    <p class="muted">Pick the closest family, then type the exact model. Not sure? Use the guide above.</p>
+    <div class="row">
+      <label>CPU family
+        <select name="cpu_family" required><option value="">Choose&hellip;</option><option>AMD Ryzen</option><option>Intel Core</option><option>Intel Core Ultra</option><option>Other / not sure</option></select>
+      </label>
+      <label>CPU model <input name="cpu_model" type="text" placeholder="e.g. Ryzen 5 5600X"></label>
+    </div>
+    <div class="row">
+      <label>Motherboard brand
+        <select name="mb_brand"><option value="">Choose&hellip;</option><option>ASUS</option><option>MSI</option><option>Gigabyte</option><option>ASRock</option><option>Prebuilt / OEM</option><option>Other / not sure</option></select>
+      </label>
+      <label>Motherboard model <input name="mb_model" type="text" placeholder="e.g. B550 Tomahawk"></label>
+    </div>
+    <div class="row">
+      <label>RAM amount
+        <select name="ram_size"><option value="">Choose&hellip;</option><option>8 GB</option><option>16 GB</option><option>32 GB</option><option>64 GB</option><option>128 GB or more</option></select>
+      </label>
+      <label>RAM type
+        <select name="ram_type"><option value="">Choose&hellip;</option><option>DDR3</option><option>DDR4</option><option>DDR5</option><option>Not sure</option></select>
+      </label>
+      <label>RAM speed <input name="ram_speed" type="text" placeholder="e.g. 3200 MHz"></label>
+    </div>
+    <div class="row">
+      <label>GPU brand
+        <select name="gpu_brand"><option value="">Choose&hellip;</option><option>NVIDIA GeForce</option><option>AMD Radeon</option><option>Intel Arc</option><option>Integrated graphics</option><option>Other / not sure</option></select>
+      </label>
+      <label>GPU model <input name="gpu_model" type="text" placeholder="e.g. RTX 3060 12GB"></label>
+    </div>
+    <div class="row">
+      <label>Main drive type
+        <select name="drive_type"><option value="">Choose&hellip;</option><option>NVMe SSD</option><option>SATA SSD</option><option>Hard drive (HDD)</option><option>Mix of drives</option></select>
+      </label>
+      <label>Total storage <input name="storage" type="text" placeholder="e.g. 1 TB NVMe + 2 TB HDD"></label>
+    </div>
+    <label>Anything else (case, cooler, PSU, what you use it for) <textarea name="notes" rows="3"></textarea></label>
+    <label>Or paste your System Information here <textarea name="sysinfo" rows="4" placeholder="Optional: from msinfo32 or CPU-Z"></textarea></label>
+  </fieldset>
+  <fieldset>
+    <legend>Permission</legend>
+    <label class="check"><input type="checkbox" name="consent" required> Nicholls Tech may show this rig on the website under the name or nickname above. I can ask to have it removed anytime.</label>
+    <p class="muted">A bot check (Cloudflare Turnstile) will sit here on the live version.</p>
+  </fieldset>
+  <button class="btn" type="submit">Submit my rig</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+</section>
+<section>
+  <h2>Rigs in the gallery</h2>
+  <p class="empty">No rigs yet. Yours could be first.</p>
+</section>
+
+</main>
+<footer class="site-footer">
+  <p>Nicholls Tech &middot; Custom PC builds, upgrades and repairs &middot; Serving Staten Island, NY</p>
+  <p class="muted">Concept site in development. Nothing here is final, and no forms send data yet.</p>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

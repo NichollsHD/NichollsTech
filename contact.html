@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Contact | Nicholls Tech (concept)</title>
+<meta name="description" content="Send a formal inquiry to Nicholls Tech.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="concept-bar">Concept build: layout and placeholder content only. Not the final site.</div>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-mark">NT</span> Nicholls Tech</a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="builds.html">Builds</a><a href="services.html">Services</a><a href="rigs.html">Community rigs</a><a href="projects.html">Projects</a><a href="contact.html" aria-current="page">Contact</a></nav>
+</header>
+<main>
+
+<section class="page-head">
+  <h1>Contact</h1>
+  <p class="lead">Tell me what you need and I'll reply by email. Demo only for now: nothing is sent or saved.</p>
+</section>
+<form class="form demo-form" data-demo="contact" novalidate>
+  <label>Name <input name="name" type="text" autocomplete="off" required></label>
+  <label>Email <input name="email" type="email" autocomplete="off" required></label>
+  <label>What do you need?
+    <select name="topic" required>
+      <option value="">Choose&hellip;</option>
+      <option>Custom build</option>
+      <option>Upgrade</option>
+      <option>Repair</option>
+      <option>Diagnostics</option>
+      <option>Something else</option>
+    </select>
+  </label>
+  <label>Rough budget (optional)
+    <select name="budget">
+      <option value="">Prefer not to say</option>
+      <option>Under $800</option>
+      <option>$800 to $1,500</option>
+      <option>$1,500 to $2,500</option>
+      <option>Over $2,500</option>
+    </select>
+  </label>
+  <label>Message <textarea name="message" rows="5" required></textarea></label>
+  <p class="muted">A bot check (Cloudflare Turnstile) will sit here on the live version.</p>
+  <button class="btn" type="submit">Send inquiry</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+
+</main>
+<footer class="site-footer">
+  <p>Nicholls Tech &middot; Custom PC builds, upgrades and repairs &middot; Serving Staten Island, NY</p>
+  <p class="muted">Concept site in development. Nothing here is final, and no forms send data yet.</p>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
